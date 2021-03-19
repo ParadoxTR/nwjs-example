@@ -1,0 +1,23 @@
+{
+  "name": "nw.js-example",
+  "version": "1.0.0",
+  "description": "This project for beginners",
+  "main": "index.html",
+  "scripts": {
+    "start": "nw ."
+  },
+  "window": {
+    "width": 900,
+    "height": 600,
+    "frame": true,
+    "icon": "icon.png"
+  },
+  "devDependencies": {
+    "nw": "sdk"
+  },
+  "keywords": [
+    "nw.js"
+  ],
+  "author": "ParadoxTR",
+  "license": "MIT"
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example App</title>
+</head>
+<body>
+    <h1>Show Developer Tools</h1>
+    <button onclick="nw.Window.get().showDevTools()" > Show Developer Tools </button>
+    <h1>Create New Window</h1>
+    <h3>Height;</h3>
+    <input id="heightinput" type="number">
+    <h3>Width;</h3>
+    <input id="widthinput" type="number"><br><br>
+    <input type="checkbox" id="framelesscheck">
+    <label for="framelesscheck"> Frameless</label><br><br>
+    <button onclick="createWindow()" type="submit">Create New Window</button>
+    <script src="main.js"></script>
+    <script>
+        function createWindow() {
+            var widths = 900;
+            if(document.getElementById("widthinput").value){
+                widths = document.getElementById("widthinput").value
+            }
+            var heights = 600;
+            if(document.getElementById("heightinput").value){
+                heights = document.getElementById("heightinput").value
+            }
+            var frameless = true;
+            if(document.getElementById("framelesscheck").checked == true){
+                frameless = false
+            }
+            nw.Window.open('https://github.com/ParadoxTR', {width: parseInt(widths) , height: parseInt(heights), frame: Boolean(frameless)});
+        }
+    </script>
+</body>
+</html>
